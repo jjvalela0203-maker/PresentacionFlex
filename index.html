@@ -12,8 +12,10 @@
         <h1 class="titulo"> Presentacion CSS</h1>
         <nav class="menu">
             <ul>
-                <li><a href="#sobremi">Display Flex</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#flexbox">Display Flex</a></li>
+                <li><a href="#direction">Dirección y Distribución</a></li>
+                <li><a href="#orden-flex">Orden y Flexibilidad</a></li>
+                <li><a href="#grid">CSS Grid</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#mascotas.html">Mascotas</a></li>
             </ul>
@@ -28,22 +30,403 @@
         </section>
 
         <section id="direction">
-            <h1>Direccion y distribucion</h1>
+            <h1>Dirección y Distribución</h1>
             <p> Ya con nuestra flexbox creada, podemos dar una direccion al contenido de esa flexbox, como por ejemplo:</p>
-            <div class="row">
-                <h1>Row</h1>
-                <p> El contenido de este contenedor se vera en fila</p>
-                <img src="resources/aristoteles-busto.jpg">
-                <img src="resources/aristoteles-enseñando.png">
-            </div>
-            <div class="row-reverse">
-
-            </div>
-            <div class="colum">
-
+            
+            <!-- Ejemplos de Flex Direction -->
+            <div class="ejemplo-flex">
+                <h2>Row</h2>
+                <p> El contenido de este contenedor se verá en fila (comportamiento por defecto).</p>
+                <div class="row">
+                    <img src="resources/lavoe.png" alt="Imagen 1">
+                    <img src="resources/ruben.jpg" alt="Imagen 2">
+                </div>
             </div>
 
+            <div class="ejemplo-flex">
+                <h2>Row-reverse</h2>
+                <p> El contenido se verá en fila, pero en orden inverso (de derecha a izquierda).</p>
+                <div class="row-reverse">
+                    <img src="resources/lavoe.png" alt="Imagen 1">
+                    <img src="resources/ruben.jpg" alt="Imagen 2">
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Column</h2>
+                <p> El contenido se verá en columna (apilado verticalmente).</p>
+                <div class="column">
+                    <img src="resources/lavoe.png" alt="Imagen 1">
+                    <img src="resources/ruben.jpg" alt="Imagen 2">
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Column-reverse</h2>
+                <p> El contenido se verá en columna en orden inverso (de abajo hacia arriba).</p>
+                <div class="column-reverse">
+                    <img src="resources/lavoe.png" alt="Imagen 1">
+                    <img src="resources/ruben.jpg" alt="Imagen 2">
+                </div>
+            </div>
+
+            <hr>
+            <div class="ejemplo-flex">
+                <h2>Distribución (Justify Content)</h2>
+                <p>Define cómo se distribuye el espacio entre los elementos en el eje principal.</p>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Flex-start:</strong> Se alinea al inicio del contenedor</p>
+                <div class="flex-start">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Flex-end:</strong> Se alinea al final del contenedor</p>
+                <div class="flex-end">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                </div>
+            </div>            
+            <div class="ejemplo-flex">
+                <p><strong>Space-between:</strong> Espacio máximo entre elementos.</p>
+                <div class="justify-between">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Space-around:</strong> Espacio igual alrededor de cada elemento.</p>
+                <div class="justify-around">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Center:</strong> Elementos centrados en el eje principal.</p>
+                <div class="justify-center">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Space-evenly:</strong> Espacio idéntico entre cualquier par de elementos y los bordes.</p>
+                <div class="justify-evenly">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                </div>
+            </div>
+
+            <hr>
+            <h2>Alineación de Items (Align Items)</h2>
+            <p>Define cómo se alinean los elementos en el eje secundario (vertical si es fila).</p>
+            <div class="ejemplo-flex">
+                <p><strong>Flex-start:</strong> Alineación al inicio del contenedor.</p>
+                <div class="align-items-start contenedor-alto">
+                    <img src="resources/lavoe.png" alt="1">
+                    <p>Texto alineado al inicio junto a la imagen</p>
+                </div>
+            </div>            
+            <div class="ejemplo-flex">
+                <p><strong>Center:</strong> Alineación central vertical.</p>
+                <div class="align-items-center contenedor-alto">
+                    <img src="resources/lavoe.png" alt="1">
+                    <p>Texto alineado al centro junto a la imagen</p>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <p><strong>Flex-end:</strong> Alineación al fondo del contenedor.</p>
+                <div class="align-items-end contenedor-alto">
+                    <img src="resources/lavoe.png" alt="1">
+                    <p>Alineado abajo</p>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <p><strong>Stretch:</strong> Los elementos se estiran para llenar el contenedor (por defecto).</p>
+                <div class="align-items-stretch contenedor-alto">
+                    <div class="caja-ejemplo">Caja 1</div>
+                    <div class="caja-ejemplo">Caja 2</div>
+                </div>
+            </div>
+
+            <hr>
+            <h2>Flex Wrap</h2>
+            <p>Determina si los elementos hijos se ven obligados a permanecer en una sola línea o si pueden saltar a nuevas líneas.</p>
+            <div class="ejemplo-flex">
+                <p><strong>Nowrap:</strong> Los elementos se comprimen en una sola línea (comportamiento por defecto).</p>
+                <div class="flex-nowrap">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                    <img src="resources/lavoe.png" alt="4">
+                    <img src="resources/ruben.jpg" alt="5">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Wrap:</strong> Los elementos saltan a la siguiente línea si no caben.</p>
+                <div class="flex-wrap" style="width: 400px; margin: 0 auto;">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                    <img src="resources/lavoe.png" alt="4">
+                    <img src="resources/ruben.jpg" alt="5">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Wrap-reverse:</strong> Los elementos saltan a la línea anterior (hacia arriba).</p>
+                <div class="flex-wrap-reverse" style="width: 400px; margin: 0 auto;">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                    <img src="resources/lavoe.png" alt="4">
+                    <img src="resources/ruben.jpg" alt="5">
+                </div>
+            </div>
+
+            <hr>
+            <h2>Alineación de Contenido (Align Content)</h2>
+            <p>Esta propiedad solo funciona cuando hay <strong>múltiples líneas</strong> (flex-wrap: wrap).</p>
+            
+            <div class="ejemplo-flex">
+                <p><strong>Space-between:</strong> Distribuye las líneas de elementos con espacio máximo entre ellas.</p>
+                <div class="align-content-between contenedor-wrap">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                    <img src="resources/lavoe.png" alt="4">
+                    <img src="resources/ruben.jpg" alt="5">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Space-around:</strong> Distribuye las líneas de elementos con espacio igual alrededor de ellas.</p>
+                <div class="align-content-around contenedor-wrap">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                    <img src="resources/lavoe.png" alt="4">
+                    <img src="resources/ruben.jpg" alt="5">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Center:</strong> Junta todas las líneas en el centro del contenedor.</p>
+                <div class="align-content-center contenedor-wrap">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                    <img src="resources/lavoe.png" alt="4">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Flex-start:</strong> Distribuye las líneas de elementos al inicio del contenedor.</p>
+                <div class="align-content-start contenedor-wrap">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                    <img src="resources/lavoe.png" alt="4">
+                    <img src="resources/ruben.jpg" alt="5">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Flex-end:</strong> Distribuye las líneas de elementos al final del contenedor.</p>
+                <div class="align-content-end contenedor-wrap">
+                    <img src="resources/lavoe.png" alt="1">
+                    <img src="resources/ruben.jpg" alt="2">
+                    <img src="resources/willie_colon.jpg" alt="3">
+                    <img src="resources/lavoe.png" alt="4">
+                    <img src="resources/ruben.jpg" alt="5">
+                </div>
+            </div>
+            <div class="ejemplo-flex">
+                <p><strong>Stretch:</strong> Distribuye las líneas de elementos para que cubran todo el contenedor</p>
+                <div class="align-content-stretch contenedor-wrap">
+                    <div class="caja-ejemplo">Caja 1</div>
+                    <div class="caja-ejemplo">Caja 2</div>
+                    <div class="caja-ejemplo">Caja 3</div>
+                    <div class="caja-ejemplo">Caja 4</div>
+                    <div class="caja-ejemplo">Caja 5</div>
+                    <div class="caja-ejemplo">Caja 6</div>
+                </div>
+            </div>
+            <hr>
         </section>
+
+        <section id="orden-flex">
+            <h1>Orden y Flexibilidad</h1>
+            <p>Estas propiedades se aplican directamente a los <strong>hijos</strong> (flex-items) para controlar su comportamiento individual.</p>
+
+            <div class="ejemplo-flex">
+                <h2>Order</h2>
+                <p>Cambia el orden visual de los elementos sin alterar el HTML. Por defecto todos son 0. Aquí el primer ítem tiene <code>order: 2</code>.</p>
+                <div class="contenedor-ejemplo-items">
+                    <div class="caja-ejemplo item-order">1 (Order: 2)</div>
+                    <div class="caja-ejemplo">2 (Order: 0)</div>
+                    <div class="caja-ejemplo">3 (Order: 0)</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Flex-grow</h2>
+                <p>Define la capacidad de un ítem para crecer y ocupar el espacio sobrante.</p>
+                <div class="contenedor-ejemplo-items">
+                    <div class="caja-ejemplo grow-0">Grow: 0</div>
+                    <div class="caja-ejemplo grow-1">Grow: 1</div>
+                    <div class="caja-ejemplo grow-2">Grow: 2</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Flex-shrink</h2>
+                <p>Define la capacidad de un ítem para encogerse cuando no hay espacio suficiente. El ítem rojo tiene <code>shrink: 0</code> (no se encoge).</p>
+                <div class="contenedor-ejemplo-items shrink-container">
+                    <div class="caja-ejemplo shrink-0">No me encojo</div>
+                    <div class="caja-ejemplo shrink-1">Yo sí (1)</div>
+                    <div class="caja-ejemplo shrink-1">Yo sí (1)</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Flex-basis</h2>
+                <p>Establece el tamaño inicial de un ítem antes de que se reparta el espacio sobrante.</p>
+                <div class="contenedor-ejemplo-items">
+                    <div class="caja-ejemplo basis-200">Basis: 200px</div>
+                    <div class="caja-ejemplo">Automático</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Shorthand: Flex</h2>
+                <p>Es la combinación de <code>grow | shrink | basis</code>. Es la forma recomendada de escribirlo.</p>
+                <div class="contenedor-ejemplo-items">
+                    <div class="caja-ejemplo" style="flex: 1 1 100px;">Flex: 1 1 100px</div>
+                    <div class="caja-ejemplo" style="flex: 2 1 100px;">Flex: 2 1 100px</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Align-self</h2>
+                <p>Permite que un ítem individual ignore la alineación general (align-items) del contenedor.</p>
+                <div class="contenedor-ejemplo-items contenedor-alto" style="align-items: center;">
+                    <div class="caja-ejemplo">Normal (Center)</div>
+                    <div class="caja-ejemplo align-self-start" style="background-color: #e67e22 !important;">Self: Start</div>
+                    <div class="caja-ejemplo align-self-end" style="background-color: #2ecc71 !important;">Self: End</div>
+                    <div class="caja-ejemplo align-self-stretch" style="background-color: #9b59b6 !important;">Self: Stretch</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grid">
+            <h1>CSS Grid Layout</h1>
+            <p>A diferencia de Flexbox, Grid es un sistema de diseño bidimensional, lo que significa que maneja tanto columnas como filas.</p>
+
+            <div class="ejemplo-flex">
+                <h2>Estructura Básica (Columns & Rows)</h2>
+                <p>Usamos <code>grid-template-columns</code> y <code>grid-template-rows</code> para definir la rejilla.</p>
+                <div class="grid-basico">
+                    <div class="caja-ejemplo">1</div>
+                    <div class="caja-ejemplo">2</div>
+                    <div class="caja-ejemplo">3</div>
+                    <div class="caja-ejemplo">4</div>
+                    <div class="caja-ejemplo">5</div>
+                    <div class="caja-ejemplo">6</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Unidades de Fracción (fr)</h2>
+                <p>La unidad <code>fr</code> reparte el espacio disponible proporcionalmente. En este ejemplo la columna central es <code>2fr</code> y las laterales <code>1fr</code>.</p>
+                <div class="grid-fr">
+                    <div class="caja-ejemplo">1fr</div>
+                    <div class="caja-ejemplo" style="background-color: #e67e22 !important;">2fr (Doble espacio)</div>
+                    <div class="caja-ejemplo">1fr</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Función Repeat</h2>
+                <p>Evita repetir código. <code>repeat(4, 1fr)</code> define 4 columnas iguales de forma compacta.</p>
+                <div class="grid-repeat">
+                    <div class="caja-ejemplo">1</div>
+                    <div class="caja-ejemplo">2</div>
+                    <div class="caja-ejemplo">3</div>
+                    <div class="caja-ejemplo">4</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Auto-fill (Responsividad automática)</h2>
+                <p>Crea tantas columnas como quepan en el contenedor sin necesidad de Media Queries usando <code>auto-fill</code> y <code>minmax</code>.</p>
+                <div class="grid-autofill">
+                    <div class="caja-ejemplo">Caja</div>
+                    <div class="caja-ejemplo">Caja</div>
+                    <div class="caja-ejemplo">Caja</div>
+                    <div class="caja-ejemplo">Caja</div>
+                    <div class="caja-ejemplo">Caja</div>
+                    <div class="caja-ejemplo">Caja</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Posicionamiento (Grid Column & Row)</h2>
+                <p>Podemos hacer que un elemento ocupe varias celdas.</p>
+                <div class="grid-basico">
+                    <div class="caja-ejemplo item-expandido">Expandido (1 / 3)</div>
+                    <div class="caja-ejemplo">2</div>
+                    <div class="caja-ejemplo">3</div>
+                    <div class="caja-ejemplo item-alto">Alto (2 / 4)</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Gap (Espaciado)</h2>
+                <p>Define el espacio entre filas y columnas de forma sencilla.</p>
+                <div class="grid-basico grid-gap">
+                    <div class="caja-ejemplo">1</div>
+                    <div class="caja-ejemplo">2</div>
+                    <div class="caja-ejemplo">3</div>
+                    <div class="caja-ejemplo">4</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Grid Template Areas</h2>
+                <p>Permite maquetar visualmente nombrando secciones del diseño.</p>
+                <div class="grid-areas">
+                    <div class="caja-ejemplo area-header">Header</div>
+                    <div class="caja-ejemplo area-sidebar">Sidebar</div>
+                    <div class="caja-ejemplo area-main">Contenido Principal</div>
+                    <div class="caja-ejemplo area-footer">Footer</div>
+                </div>
+            </div>
+
+            <div class="ejemplo-flex">
+                <h2>Alineación (Place-items)</h2>
+                <p>Controla la alineación horizontal y vertical de todo el contenido del grid a la vez.</p>
+                <div class="grid-basico grid-center">
+                    <div class="caja-ejemplo" style="width: 50px; height: 50px;">1</div>
+                    <div class="caja-ejemplo" style="width: 50px; height: 50px;">2</div>
+                    <div class="caja-ejemplo" style="width: 50px; height: 50px;">3</div>
+                    <div class="caja-ejemplo" style="width: 50px; height: 50px;">4</div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .caja-ejemplo {
+                background: #3498db;
+                color: white;
+                padding: 15px;
+                border: 1px solid #2980b9;
+                text-align: center;
+            }
+        </style>
 
         <section id="contacto">
             <h1>Contacto</h1>
